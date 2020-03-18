@@ -1,0 +1,13 @@
+<ion-grid ion-item>
+  <ion-row (click)="toggle($event)">
+    <ion-col size="6">
+      <h6>{{ comment.name }}</h6>
+    </ion-col>
+    <ion-col size="6">
+      <ion-label><span ng-non-bindable>{{ </span> {{ comment.macro }}<span ng-non-bindable> }}</span></ion-label>
+    </ion-col>
+    <ion-col size="12">
+      {{ comment.text }}
+    </ion-col>
+  </ion-row>
+</ion-grid>

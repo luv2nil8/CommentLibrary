@@ -1,0 +1,21 @@
+  <ion-row (click)="collapse()">
+    <ion-col size="6">
+      <ion-button size="small" fill="clear" color="dark">
+        <ion-icon *ngIf="comments.length" slot="start" name="{{ icon }}"></ion-icon>
+        {{ title }}
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button style="margin-left:-12px;float:right" size="small" fill="clear" (click)="addComment()">
+        <ion-icon slot="end" name="add"></ion-icon>
+        New
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <div #collapsible>
+      <ion-list *ngIf="comments.length">
+        <app-comm *ngFor="let comment of comments" [comment]="comment"></app-comm>
+      </ion-list>
+    </div>
+  </ion-row>
